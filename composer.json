@@ -1,0 +1,11 @@
+{
+    "name": "x/x",
+    "autoload": {
+        "psr-4": {
+            "X\\X\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6"
+    }
+}
