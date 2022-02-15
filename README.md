@@ -12,5 +12,5 @@
 
 
 ## เข้าใช้งาน
-้http://localhost:8888  โดยจะใช้ Keycloak ที่ https://keycloak.geniustree.io/ โดยสามารถ register ที่หน้า login ได้เลย 
+http://localhost:8888  โดยจะใช้ Keycloak ที่ https://keycloak.geniustree.io/ โดยสามารถ register ที่หน้า login ได้เลย 
 สามารถ register ได้สองแบบ form หรือ github 
