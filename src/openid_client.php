@@ -1,11 +1,15 @@
 <?php
+$configs = require('config.php');
+$base_url = $configs["BASE_URL"];
+
 function getToken($client,$code){
+    global $base_url;
     $response = $client->request('POST','https://keycloak.geniustree.io/realms/geniustree/protocol/openid-connect/token',
                 ['form_params'=>[
                     'client_id'=>'php_app',
                     'client_secret'=>'5Hi7Q6BHmCB5xSB9fDdowGwzJ2wiyN6M',
                     'grant_type'=>'authorization_code',
-                    'redirect_uri'=>'http://localhost:8888/src/auth.php',/** must use same value as when redirect to login page */
+                    'redirect_uri'=>"$base_url/src/auth.php",/** must use same value as when redirect to login page */
                     'code'=>$code
                 ],
                 'verify'=>false]);
@@ -37,4 +41,5 @@ function keyCloakLogout($client,$accessToken,$refreshToken){
                 ,
                 'verify'=>false]);
 }
+
 ?>
