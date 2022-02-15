@@ -21,6 +21,7 @@ if($user == NULL){
     }
     echo "<h3>Login Successful</h3><br/>";
     echo "<h2><a href='logout.php'>Single Logout(logout from Keycloak and all other app too.)</a></h2>";
+    echo "<h3><a href='https://keycloak.geniustree.io/realms/geniustree/account/'>Account Info page</a></h3>";
     echo "Name: $user->name<br/>";
     echo "Email: $user->email<br/>";
     echo "JSON details:<br/><pre>".json_encode($user,JSON_PRETTY_PRINT)."</pre>";
